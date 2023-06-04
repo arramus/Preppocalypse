@@ -1,0 +1,174 @@
+<Preppocalypse>
+
+    <!-- Make Encumberence Debuff percentage lower to accomodate more locked inventory slots -->
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
+	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_set']/@value">60</set>
+
+<!-- Oakraven Fish Traps - Thank you to MeanCloud Fishing, which in turn credits ACP Fishing, for inspiration -->
+
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group name="FishTrapWater">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FishTrapEmptyWater">
+				<requirement name="CVarCompare" cvar="_wetness" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="_sheltered" operation="GT" value="0.19"/>
+				<requirement name="CVarCompare" cvar="_sheltered" operation="LT" value="0.21"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FishTrapEmptyWater">
+				<requirement name="CVarCompare" cvar="_wetness" operation="LT" value="0.001"/>
+			</triggered_effect>
+		</effect_group>
+	</append>
+	
+	<append xpath="/buffs">
+		<buff name="FishTrapEmptyWater" duration="2" name_key="FishTrapEmptyWater" description_key="FishTrapEmptyWaterDesc" icon="ui_game_symbol_water_trap">
+			<display_value_key value="Bait Fish Trap"/> <display_value value="xxx"/>
+			<update_rate value="0.5"/>
+			<stack_type value="replace"/>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FishTrapEmptyWater"/>
+		</effect_group>
+		</buff>		
+	</append>
+	
+<!-- Vehicles -->
+	
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="PrepperVehicleChecker">
+			<requirement name="NotHasBuff" buff="PrepperVehicleChecker"/>
+		</triggered_effect>
+	</append>
+	
+	<append xpath="/buffs">
+		<buff name="PrepperVehicleChecker" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="500"/>
+			<update_rate value=".1"/>
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="vehiclePreppergyroCheck">
+					<requirement name="EntityTagCompare" target="other" tags="vehiclepreppergyro"/>
+					<requirement name="NotHasBuff" target="other" buff="vehiclePreppergyroCheck"/>
+				</triggered_effect>			
+			</effect_group>				
+		</buff>
+		
+		<buff name="vehiclePreppergyroCheck" hidden="true">
+			<stack_type value="ignore"/>			
+			<effect_group>
+			
+			<!-- Local offset parameters attach the prefab onto the model - 0,0,0 - First expresses left to right from central origin. / Second expresses up and down from central origin. / Third expresses front to back from central origin. -->
+			<!-- Local rotation parameters direct the angle of the prefab onto the model - 0,0,0 - First expresses forwards/backwards angle. / Second expresses left/right twist angle. / Third expresses left/right lean angle. -->
+			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_tirePrefab.prefab" local_offset="-0.5,0.4,-0.7" local_rotation="0,0,0" parent_transform="Origin"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Entities/Vehicles?Car/car_tirePrefab.prefab" local_offset="0.5,0.4,-0.7" local_rotation="0,0,0" parent_transform="Origin"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Appliances/vent_fan_doublePrefab" local_offset="-0,0.8,-0.7" local_rotation="0,0,0" parent_transform="Origin"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Lighting/lanternPlayerPrefab" local_offset="0,0.55,2.05" local_rotation="70,0,0" parent_transform="Origin"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Electrical/smallGeneratorPrefab" local_offset="0,1.3,-0.14" local_rotation="0,0,0" parent_transform="Origin"/>				
+			</effect_group>
+		</buff>
+	</append>
+	
+<!-- Entities -->
+	
+	<append xpath="/buffs">	
+	
+		<buff name="zombiePrepperSpiderFeralBomberDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Junk Drone/junkDrone_Prefab.prefab" local_offset="0,0.5,-0.4" local_rotation="-57,0,0" parent_transform="Spine"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Electrical/smallGeneratorPrefab" local_offset="-0.03,0.52,-0.42" local_rotation="-57,0,0" parent_transform="Spine"/>				
+			</effect_group>
+		</buff>
+	
+		<buff name="zombiePrepperSpiderFeralGliderDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Animals/Vulture/animalVultureStandard" local_offset="0,-.3,.25" local_rotation="-45,0,0" parent_transform="Spine"/> <!-- A19 Oakraven -->
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Spine" transform_path="body_mesh"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0.2,0,0" local_rotation="0,0,0" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="-0.1,-0.15,0" local_rotation="0,0,0" parent_transform="LeftHand"/>			
+			</effect_group>
+		</buff>
+		
+		<buff name="animalBloodMoonZombieChickenDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab" local_offset="-0.1,-0.04,0" local_rotation="235,90,0" parent_transform="CHICKEN_ Head"/> <!-- -0.1,-0.02,0 -->
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieM60DemolitionDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab" local_offset="0.18,0.03,-0.07" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab" local_offset="-0.18,-0.03,0.07" local_rotation="7,-80,-90" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down --> <!-- Local Rotation Exorcist Spin/Nodding/Thinking -->	
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieSMGArleneDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/SMG/SMGPrefab.prefab" local_offset="-0.3,-0.045,0.0975" local_rotation="7,-80,-90" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+
+		<buff name="zombieTARifleSoldierDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab" local_offset="0.3,0.03,-0.1" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+
+		<buff name="zombieBatonHazmatDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab" local_offset="0.1,0.04,0" local_rotation="270,180,-180" parent_transform="RightHand"/> <!-- Local Offset Up-Down/Front-Back/Left-Right -->				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock_small" local_offset="0.1,0.04,0" local_rotation="270,180,-180" parent_transform="RightHand"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieSteelAxeLumberjackDeco" hidden="true">
+			<effect_group>								
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/steelAxePrefab.prefab" local_offset="0.1,0.02,0.0" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Up-Down/Left-Right/Front-Back -->
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieMachetePartyGirlDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab" local_offset="0.1,0.04,0" local_rotation="270,180,-180" parent_transform="RightHand"/> <!-- Local Offset Up-Down/Front-Back/Left-Right -->				
+			</effect_group>
+		</buff>
+		
+		<buff name="zombiePistolBusinessManDeco" hidden="true">
+			<effect_group>								
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab" local_offset="0.2,0.035,-0.038" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieNailgunUtilityWorkerDeco" hidden="true">
+			<effect_group>								
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/nailgunPrefab.prefab" local_offset="0.17,0.035,-0.038" local_rotation="180,0,180" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+	
+		<buff name="zombieSwissVetterliBoeDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/Vetterli.unity3d?Vetterli" local_offset="0.16,0.03,-0.06" local_rotation="187,-55,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieChainsawMoeDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Chainsaw/chainsawPrefab.prefab" local_offset="0.17,0.05,-0.1" local_rotation="0,150,270" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="chainsaw_idle" />
+			</effect_group>
+		</buff>
+		
+		<buff name="zombieDesertVultureTomClarkDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Desert Eagle/DesertEaglePrefab.prefab" local_offset="0.17,0.03,-0.04" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Desert Eagle/DesertEaglePrefab.prefab" local_offset="-0.17,-0.03,0.04" local_rotation="7,-80,-90" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down --> <!-- Local Rotation Exorcist Spin/Nodding/Thinking -->	
+			</effect_group>
+		</buff>
+
+		<buff name="zombiePumpShotgunBikerDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab" local_offset="0.25,0.06,-0.25" local_rotation="187,-25,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>		
+		
+	</append>
+	
+</Preppocalypse>

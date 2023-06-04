@@ -1,0 +1,544 @@
+<Preppocalypse>
+
+	<!-- All in the Day Forest/Desert/Snow -->	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/>
+		<entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/>		
+	</append>
+
+	<!-- All at Night Forest/Desert/Snow -->	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="zombiePrepperSpiderFeralGlider" prob="0.15"/>
+		<entity name="zombiePrepperSpiderFeralBomber" prob="0.15"/>		
+	</append>
+	
+	<!-- All in the Day Wasteland -->	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+		<entity name="zombieMutatedFeral" prob="0.75"/>
+		<entity name="zombiePrepperSpiderFeralGlider" prob="0.75"/>
+		<entity name="zombiePrepperSpiderFeralBomber" prob="0.75"/>
+		<entity name="zombieM60Demolition" prob="0.75"/>
+		<entity name="zombieSMGArlene" prob="0.75"/>
+		<entity name="zombieTARifleSoldier" prob="0.75"/>
+		<entity name="zombieBatonHazmat" prob="0.75"/>
+		<entity name="zombieSteelAxeLumberjack" prob="0.75"/>
+		<entity name="zombieMachetePartyGirl" prob="0.75"/>
+		<entity name="zombiePistolBusinessMan" prob="0.75"/>
+		<entity name="zombieNailgunUtilityWorker" prob="0.75"/>
+		<entity name="zombieSwissVetterliBoe" prob="0.75"/>
+		<entity name="zombieChainsawMoe" prob="0.75"/>
+		<entity name="zombieDesertVultureTomClark" prob="0.75"/>
+		<entity name="zombiePumpShotgunBiker" prob="0.75"/>
+	</append>
+
+	<!-- All at Night Wasteland -->	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<entity name="zombieMutatedRadiated" prob="1.25"/>
+		<entity name="zombiePrepperSpiderFeralGlider" prob="1.25"/>
+		<entity name="zombiePrepperSpiderFeralBomber" prob="1.25"/>
+		<entity name="zombieM60Demolition" prob="1.25"/>
+		<entity name="zombieSMGArlene" prob="1.25"/>
+		<entity name="zombieTARifleSoldier" prob="1.25"/>
+		<entity name="zombieBatonHazmat" prob="1.25"/>
+		<entity name="zombieSteelAxeLumberjack" prob="1.25"/>
+		<entity name="zombieMachetePartyGirl" prob="1.25"/>
+		<entity name="zombiePistolBusinessMan" prob="1.25"/>
+		<entity name="zombieNailgunUtilityWorker" prob="1.25"/>
+		<entity name="zombieSwissVetterliBoe" prob="1.25"/>
+		<entity name="zombieChainsawMoe" prob="1.25"/>
+		<entity name="zombieDesertVultureTomClark" prob="1.25"/>
+		<entity name="zombiePumpShotgunBiker" prob="1.25"/>		
+	</append>
+	
+	<!-- Animals -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
+		<entity name="animalBossGrace" prob="10"/>		
+	</append>
+	
+	<!-- Snow -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">
+		<entity name="animalWolf" prob="12"/>
+	</append>
+
+	<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']/entity[@name='animalMountainLion']/@prob">9</set><!-- default 25 -->
+	<set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']/entity[@name='animalBear']/@prob">7</set><!-- default 10 -->
+	
+	<!-- Forest -->
+	
+	<set xpath="/entitygroups/entitygroup[@name='WildGameForest']/entity[@name='animalRabbit']/@prob">30</set><!-- default 48 -->
+	<set xpath="/entitygroups/entitygroup[@name='WildGameForest']/entity[@name='animalChicken']/@prob">30</set><!-- default 48 -->
+	<set xpath="/entitygroups/entitygroup[@name='WildGameForest']/entity[@name='animalBoar']/@prob">2</set><!-- default 1 -->
+	<set xpath="/entitygroups/entitygroup[@name='WildGameForest']/entity[@name='animalStag']/@prob">3</set><!-- default 1 -->
+	<set xpath="/entitygroups/entitygroup[@name='WildGameForest']/entity[@name='animalDoe']/@prob">4</set><!-- default 1 -->
+	
+	<!-- Group SMG Arlene pegged to Arlene Radiated -->
+
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieGhostTownGroupGS')]/entity[@name='zombieArleneRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieSMGArlene" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS')]/entity[@name='zombieArleneRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieSMGArlene" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieArleneRadiated']"> <!-- GS 140 -->
+		<entity name="zombieSMGArlene" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieArleneRadiated']"> <!-- GS 112 -->
+		<entity name="zombieSMGArlene" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieArleneRadiated']"> <!-- GS 79 -->
+		<entity name="zombieSMGArlene" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieArleneRadiated']"> <!-- GS 103 -->
+		<entity name="zombieSMGArlene" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieArleneRadiated']"> <!-- GS 174 -->
+		<entity name="zombieSMGArlene" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Tactical Assault Rifle Soldier pegged to Soldier Radiated -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieSoldierGroupGS')]/entity[@name='zombieSoldierRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieTARifleSoldier" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 164 -->
+		<entity name="zombieTARifleSoldier" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 386 -->
+		<entity name="zombieTARifleSoldier" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 65 -->
+		<entity name="zombieTARifleSoldier" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 453 -->
+		<entity name="zombieTARifleSoldier" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 217 -->
+		<entity name="zombieTARifleSoldier" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Baton Hazmat pegged to Hazmat Radiated -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieSoldierGroupGS')]/entity[@name='zombieMaleHazmatRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieBatonHazmat" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieMaleHazmatGroupGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 50 -->
+		<entity name="zombieBatonHazmat" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 200 -->
+		<entity name="zombieBatonHazmat" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieLabWorkerGroupGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 200 -->
+		<entity name="zombieBatonHazmat" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 189 -->
+		<entity name="zombieBatonHazmat" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 112 -->
+		<entity name="zombieBatonHazmat" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 194 -->
+		<entity name="zombieBatonHazmat" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 281 -->
+		<entity name="zombieBatonHazmat" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMaleHazmatRadiated']"> <!-- GS 153 -->
+		<entity name="zombieBatonHazmat" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Steel Axe Lumberjack pegged to Lumberjack Radiated -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+		<entity name="zombieLumberjackFeral" prob="0.1"/>
+		<entity name="zombieLumberjackRadiated" prob="0.075"/>
+		<entity name="zombieSteelAxeLumberjack" prob="0.05"/>
+	</append>
+
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieLumberjackGroupGS')]/entity[@name='zombieLumberjackRadiated']"> <!-- GS 100 -->
+		<entity name="zombieSteelAxeLumberjack" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieLumberjackRadiated']"> <!-- GS 181 -->
+		<entity name="zombieSteelAxeLumberjack" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieLumberjackRadiated']"> <!-- GS 112 -->
+		<entity name="zombieSteelAxeLumberjack" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieLumberjackRadiated']"> <!-- GS 171 -->
+		<entity name="zombieSteelAxeLumberjack" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieLumberjackRadiated']"> <!-- GS 207 -->
+		<entity name="zombieSteelAxeLumberjack" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieLumberjackRadiated']"> <!-- GS 188 -->
+		<entity name="zombieSteelAxeLumberjack" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Machete Party Girl pegged to Party Girl Radiated where possible -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroup']">
+		<entity name="zombiePartyGirlFeral" prob="0.3"/>
+		<entity name="zombiePartyGirlRadiated" prob="0.2"/>
+		<entity name="zombieMachetePartyGirl" prob="0.1"/>
+	</append>
+
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieBikerBarGroupGS')]/entity[@name='zombieMoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombiePartyGirlRadiated" prob="0.25"/><entity name="zombieMachetePartyGirl" prob="0.2"/>
+	</insertAfter>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS200']">
+		<entity name="zombiePartyGirlRadiated" prob="0.2"/>
+		<entity name="zombieMachetePartyGirl" prob="0.1"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS400']">
+		<entity name="zombiePartyGirlRadiated" prob="0.3"/>
+		<entity name="zombieMachetePartyGirl" prob="0.2"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS800']">
+		<entity name="zombiePartyGirlRadiated" prob="0.4"/>
+		<entity name="zombieMachetePartyGirl" prob="0.3"/>
+	</append>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombiePartyGirlFeral']"> <!-- GS 110 -->
+		<entity name="zombiePartyGirlRadiated" prob="0.9"/><entity name="zombieMachetePartyGirl" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombiePartyGirlFeral']"> <!-- GS 51 -->
+		<entity name="zombiePartyGirlRadiated" prob="0.9"/><entity name="zombieMachetePartyGirl" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 63 for Soldier as GS 3 is too early for Feral Party Girl -->
+		<entity name="zombiePartyGirlRadiated" prob="0.9"/><entity name="zombieMachetePartyGirl" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombiePartyGirlFeral']"> <!-- GS 96 -->
+		<entity name="zombiePartyGirlRadiated" prob="0.9"/><entity name="zombieMachetePartyGirl" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombiePartyGirlFeral']"> <!-- GS 85 -->
+		<entity name="zombiePartyGirlRadiated" prob="0.9"/><entity name="zombieMachetePartyGirl" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Pistol Business Man Party Girl pegged to Business Man Radiated where possible -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='zombieBusinessManGroupGS200']">
+		<entity name="zombieBusinessManRadiated" prob="0.2"/>
+		<entity name="zombiePistolBusinessMan" prob="0.1"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='zombieBusinessManGroupGS400']">
+		<entity name="zombieBusinessManRadiated" prob="0.3"/>
+		<entity name="zombiePistolBusinessMan" prob="0.2"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='zombieBusinessManGroupGS800']">
+		<entity name="zombieBusinessManRadiated" prob="0.4"/>
+		<entity name="zombiePistolBusinessMan" prob="0.3"/>
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS200']">
+		<entity name="zombieBusinessManRadiated" prob="0.05"/>
+		<entity name="zombiePistolBusinessMan" prob="0.04"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS400']">
+		<entity name="zombieBusinessManRadiated" prob="0.7"/>
+		<entity name="zombiePistolBusinessMan" prob="0.6"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS800']">
+		<entity name="zombieBusinessManRadiated" prob="0.9"/>
+		<entity name="zombiePistolBusinessMan" prob="0.8"/>
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS200']">
+		<entity name="zombieBusinessManRadiated" prob="0.2"/>
+		<entity name="zombiePistolBusinessMan" prob="0.1"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS400']">
+		<entity name="zombieBusinessManRadiated" prob="0.3"/>
+		<entity name="zombiePistolBusinessMan" prob="0.2"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS800']">
+		<entity name="zombieBusinessManRadiated" prob="0.4"/>
+		<entity name="zombiePistolBusinessMan" prob="0.3"/>
+	</append>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBusinessManFeral']"> <!-- GS 82 -->
+		<entity name="zombieBusinessManRadiated" prob="0.9"/><entity name="zombiePistolBusinessMan" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieBusinessManFeral']"> <!-- GS 79 -->
+		<entity name="zombieBusinessManRadiated" prob="0.9"/><entity name="zombiePistolBusinessMan" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 63 for Soldier as GS 1 is too early for Feral Business Man -->
+		<entity name="zombieBusinessManRadiated" prob="0.9"/><entity name="zombiePistolBusinessMan" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBusinessManFeral']"> <!-- GS 117 -->
+		<entity name="zombieBusinessManRadiated" prob="0.9"/><entity name="zombiePistolBusinessMan" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBusinessManFeral']"> <!-- GS 97 -->
+		<entity name="zombieBusinessManRadiated" prob="0.9"/><entity name="zombiePistolBusinessMan" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Nailgun Utility Worker pegged to Utility Worker Radiated where possible -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerGroupGS200']">
+		<entity name="zombieUtilityWorkerRadiated" prob="0.2"/>
+		<entity name="zombieNailgunUtilityWorker" prob="0.1"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerGroupGS400']">
+		<entity name="zombieUtilityWorkerRadiated" prob="0.3"/>
+		<entity name="zombieNailgunUtilityWorker" prob="0.2"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerGroupGS800']">
+		<entity name="zombieUtilityWorkerRadiated" prob="0.4"/>
+		<entity name="zombieNailgunUtilityWorker" prob="0.3"/>
+	</append>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieBikerBarGroupGS')]/entity[@name='zombieMoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieUtilityWorkerRadiated" prob="0.25"/><entity name="zombieNailgunUtilityWorker" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieUtilityWorkerFeral']"> <!-- GS 89 -->
+		<entity name="zombieUtilityWorkerRadiated" prob="0.9"/><entity name="zombieNailgunUtilityWorker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieUtilityWorkerFeral']"> <!-- GS 51 -->
+		<entity name="zombieUtilityWorkerRadiated" prob="0.9"/><entity name="zombieNailgunUtilityWorker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieSoldierRadiated']"> <!-- GS 63 for Soldier as GS 1 is too early for Feral Utility Worker -->
+		<entity name="zombieUtilityWorkerRadiated" prob="0.9"/><entity name="zombieNailgunUtilityWorker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieUtilityWorkerFeral']"> <!-- GS 103 -->
+		<entity name="zombieUtilityWorkerRadiated" prob="0.9"/><entity name="zombieNailgunUtilityWorker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieUtilityWorkerFeral']"> <!-- GS 160 -->
+		<entity name="zombieUtilityWorkerRadiated" prob="0.9"/><entity name="zombieNailgunUtilityWorker" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Swiss Vetterli Boe pegged to Boe Radiated where possible -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieGhostTownGroupGS')]/entity[@name='zombieBoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieSwissVetterliBoe" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS')]/entity[@name='zombieBoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieSwissVetterliBoe" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieBikerBarGroupGS')]/entity[@name='zombieBoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieSwissVetterliBoe" prob="0.25"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoeRadiated']"> <!-- GS 132 -->
+		<entity name="zombieSwissVetterliBoe" prob="0.9"/>
+	</insertAfter>
+
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieBoeRadiated']"> <!-- GS 65 -->
+		<entity name="zombieSwissVetterliBoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieBoeRadiated']"> <!-- GS 65 for Soldier as GS 1 is too early for Feral Utility Worker -->
+		<entity name="zombieSwissVetterliBoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBoeRadiated']"> <!-- GS 132 -->
+		<entity name="zombieSwissVetterliBoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBoeRadiated']"> <!-- GS 174 -->
+		<entity name="zombieSwissVetterliBoe" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Chainsaw Moe pegged to Moe Radiated where possible -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieGhostTownGroupGS')]/entity[@name='zombieMoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieChainsawMoe" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieBikerBarGroupGS')]/entity[@name='zombieMoeRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieChainsawMoe" prob="0.25"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoeRadiated']"> <!-- GS 132 since Radiated Moe is at GS 374-->
+		<entity name="zombieChainsawMoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieMoeRadiated']"> <!-- GS 130 -->
+		<entity name="zombieChainsawMoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieMoeRadiated']"> <!-- GS 171 -->
+		<entity name="zombieChainsawMoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieMoeRadiated']"> <!-- GS 164 -->
+		<entity name="zombieChainsawMoe" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMoeRadiated']"> <!-- GS 133 -->
+		<entity name="zombieChainsawMoe" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Desert Vulture Tom Clerk pegged to Tom Clerk Radiated where possible -->
+
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieGhostTownGroupGS')]/entity[@name='zombieTomClarkRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieDesertVultureTomClark" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieTomClarkRadiated']"> <!-- GS 216 -->
+		<entity name="zombieDesertVultureTomClark" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieTomClarkRadiated']"> <!-- GS 95 -->
+		<entity name="zombieDesertVultureTomClark" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieTomClarkRadiated']"> <!-- GS 130 -->
+		<entity name="zombieDesertVultureTomClark" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieTomClarkRadiated']"> <!-- GS 140 -->
+		<entity name="zombieDesertVultureTomClark" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieTomClarkRadiated']"> <!-- GS 147 -->
+		<entity name="zombieDesertVultureTomClark" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Pump Shotgun Biker pegged to Biker Radiated where possible -->
+
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieBikerBarGroupGS')]/entity[@name='zombieBikerRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombiePumpShotgunBiker" prob="0.25"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBikerRadiated']"> <!-- GS 181 -->
+		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieBikerRadiated']"> <!-- GS 95 -->
+		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieBikerRadiated']"> <!-- GS 79 -->
+		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBikerRadiated']"> <!-- GS 216 -->
+		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBikerRadiated']"> <!-- GS 279 -->
+		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Burnt and Mutated pegged to Moe Grunt, Feral, and Radiated spawns -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMoe']">
+		<entity name="zombieBurnt" prob="0.5"/>
+		<entity name="zombieMutated" prob="0.5"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMoeFeral']">
+		<entity name="zombieBurntFeral" prob="0.35"/>
+		<entity name="zombieMutatedFeral" prob="0.35"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMoeRadiated']"> <!-- GS 133 or about Level 55 -->
+		<entity name="zombieBurntRadiated" prob="0.2"/>
+		<entity name="zombieMutatedRadiated" prob="0.2"/>
+	</insertAfter>
+	
+	<!-- HORDE NIGHT -->
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS40']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS80']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>	
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1010']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1106']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1206']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1308']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1412']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1506']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1601']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1712']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1811']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1897']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1999']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2102']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2207']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2314']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2407']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2501']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2612']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2708']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2805']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS2903']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3003']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3103']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3204']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3306']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3410']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3514']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3601']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3707']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3814']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS3904']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS4013']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS4067']"><entity name="animalZombieDog" prob="1.0"/><entity name="animalBloodMoonZombieBunny" prob="0.7"/><entity name="animalBloodMoonZombieChicken" prob="0.4"/><entity name="animalBloodMoonZombieSnake" prob="0.2"/><entity name="zombieBurntFeral" prob="0.2"/><entity name="zombieMutatedFeral" prob="0.2"/><entity name="animalZombieBear" prob="0.15"/><entity name="zombieBatonHazmat" prob="0.15"/><entity name="zombieSteelAxeLumberjack" prob="0.15"/><entity name="zombieMachetePartyGirl" prob="0.15"/><entity name="zombieChainsawMoe" prob="0.15"/><entity name="zombieBurntRadiated" prob="0.15"/><entity name="zombieMutatedRadiated" prob="0.15"/><entity name="zombiePrepperSpiderFeralGlider" prob="0.075"/><entity name="zombiePrepperSpiderFeralBomber" prob="0.075"/></set>
+	
+	<!-- Special Entities Spawning with Demolition Entity for Horde Night -->	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieDemolition']"> <!-- GS 147 -->
+		<entity name="zombiePrepperSpiderFeralGlider" prob="0.35"/>
+		<entity name="zombiePrepperSpiderFeralBomber" prob="0.35"/>
+		<entity name="animalZombieBear" prob="0.35"/>
+		<entity name="animalBloodMoonZombieBunny" prob="0.35"/>
+		<entity name="animalBloodMoonZombieChicken" prob="0.35"/>
+		<entity name="zombieM60Demolition" prob="0.25"/>
+	</insertAfter>
+
+</Preppocalypse>

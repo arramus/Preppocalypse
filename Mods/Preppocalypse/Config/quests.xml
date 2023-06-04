@@ -1,0 +1,553 @@
+<Preppocalypse>
+
+	<set xpath="/quests/quest[@id='quest_BasicSurvival3']/objective[@type='FetchKeep']/@value">25</set>
+
+	<insertAfter xpath="/quests/quest[@id='quest_BasicSurvival3']/objective[@id='apparelPlantFiberShirt']" >
+		<objective type="Craft" id="apparelPlantFiberHood" value="1" phase="2"/>
+		<objective type="Craft" id="apparelPlantFiberShoes" value="1" phase="2"/>
+		<objective type="Craft" id="apparelPlantFiberGloves" value="1" phase="2"/>
+	</insertAfter>
+
+	<insertAfter xpath="/quests/quest[@id='quest_BasicSurvival4']/objective[@id='apparelPlantFiberShirt']" >
+		<objective type="Wear" id="apparelPlantFiberHood"/>
+		<objective type="Wear" id="apparelPlantFiberShoes"/>
+		<objective type="Wear" id="apparelPlantFiberGloves"/>
+	</insertAfter>
+	
+	<set xpath="/quests/quest[@id='quest_BasicSurvival6']">
+		<property name="group_name_key" value="quest_BasicSurvival"/>
+		<property name="name_key" value="quest_BasicSurvival6"/>
+		<property name="subtitle_key" value="quest_BasicSurvival6_subtitle"/>
+		<property name="description_key" value="quest_BasicSurvival6_description"/>
+		<property name="icon" value="ui_game_symbol_archery"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="resourceWood" value="15" phase="1">
+			<modifier type="TrackBlocks">
+				<property name="block_index_name" value="quest_wood"/>
+				<property name="nav_object" value="quest_resource"/>
+				<property name="track_distance" value="20"/>
+			</modifier>
+		</objective>
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
+		<objective type="FetchKeep" id="resourceFeather" value="5" phase="1">
+			<modifier type="TrackBlocks">
+				<property name="block_index_name" value="quest_feather"/>
+				<property name="nav_object" value="quest_resource"/>
+				<property name="track_distance" value="20"/>
+			</modifier>
+		</objective>
+		<objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1">
+			<modifier type="TrackBlocks">
+				<property name="block_index_name" value="quest_stone"/>
+				<property name="nav_object" value="quest_resource"/>
+				<property name="track_distance" value="20"/>
+			</modifier>
+		</objective>
+		<objective type="Craft" id="gunBowT0PrimitiveBow" value="1" phase="2"/>
+		<objective type="Craft" id="ammoArrowStone" value="5" phase="2"/>
+
+		<reward type="Quest" id="quest_whiteRiverCitizen1">
+			<property name="chainquest" value="false"/>
+		</reward>
+		<reward type="SkillPoints" value="7" chainreward="true"/>
+	</set>
+	
+ 	<append xpath="/quests">
+	
+	<!-- Looping Zombie Elimination Quest -->
+	<quest id="quest_eliminatezombies10">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="10 Zombies" />
+	<property name="subtitle_key" value="10 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="10"/>
+
+	<reward type="Item" id="casinoCoin" value="500"/>
+	<reward type="Quest" id="quest_eliminatezombies15">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<quest id="quest_eliminatezombies15">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="15 Zombies" />
+	<property name="subtitle_key" value="15 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="15"/>
+
+	<reward type="Exp" value="1500"/>
+	<reward type="Quest" id="quest_eliminatezombies25">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<quest id="quest_eliminatezombies25">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="25 Zombies" />
+	<property name="subtitle_key" value="25 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="25"/>
+	
+	<reward type="Item" id="casinoCoin" value="1250"/>
+	<reward type="Quest" id="quest_eliminatezombies50">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<quest id="quest_eliminatezombies50">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="50 Zombies" />
+	<property name="subtitle_key" value="50 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="50"/>
+	
+	<reward type="Exp" value="5000"/>
+	<reward type="Quest" id="quest_eliminatezombies75">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<quest id="quest_eliminatezombies75">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="75 Zombies" />
+	<property name="subtitle_key" value="75 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="75"/>
+	
+	<reward type="Item" id="casinoCoin" value="3750"/>
+	<reward type="Quest" id="quest_eliminatezombies125">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<quest id="quest_eliminatezombies125">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="125 Zombies" />
+	<property name="subtitle_key" value="125 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="125"/>
+	
+	<reward type="Exp" value="12500"/>
+	<reward type="Quest" id="quest_eliminatezombies200">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<quest id="quest_eliminatezombies200">
+	<property name="offer_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="200 Zombies" />
+	<property name="subtitle_key" value="200 Zombies" />
+	<property name="description_key" value="Accept this quest to eliminate 500 Zombies through multiple smaller stages. Eliminate 10 in the first stage for 500 Dukes, 15 for 1500 XP, 25 for 1250 Dukes, 50 for 5000 XP, 75 for 3750 Dukes, 125 for 12500 XP, and 200 for 1 Skill. This Quest repeats in an endless loop." />
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+		
+			<objective type="ZombieKill" value="200"/>
+	
+	<reward type="SkillPoints" value="1" chainreward="false"/>	
+	<reward type="Quest" id="quest_eliminatezombies10">
+			<property name="chainquest" value="false"/>
+	</reward>	
+	</quest>
+	
+	<!-- Looping Animal Elimination Quest - Influenced by TMB's Animals Hunting Quest -->
+	
+    <!-- Animals Part 1 -->
+	<quest id="quest_eliminateanimals01">
+	<property name="offer_key" value="Accept this quest to hunt a variety of animals through multiple smaller stages. You will receive Dukes and XP for completing each stage, and 2 Skill for the final stage. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="Chickens and Rabbits" />
+	<property name="subtitle_key" value="Chickens and Rabbits" />
+	<property name="description_key" value="Hunt 4 Chickens and 4 Rabbits to receive a reward and move to the next animal stage." />
+	<property name="icon" value="ui_game_symbol_animal_tracker"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="medium"/>
+	<property name="shareable" value="false"/>
+	
+			<objective type="AnimalKill" id="animalChicken" value="4"/>			
+			<objective type="AnimalKill" id="animalRabbit" value="4"/>			
+		
+	<reward type="Exp" value="2000"/>
+	<reward type="Item" id="casinoCoin" value="750"/>
+	<reward type="Quest" id="quest_eliminateanimals02">
+			<property name="chainquest" value="false"/>
+	</reward>
+	</quest>
+	
+    <!-- Animals Part 2 -->
+	<quest id="quest_eliminateanimals02">
+	<property name="offer_key" value="Accept this quest to hunt a variety of animals through multiple smaller stages. You will receive Dukes and XP for completing each stage, and 2 Skill for the final stage. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="Does, Boars, Wolves, and Coyotes" />
+	<property name="subtitle_key" value="Does, Boars, Wolves, and Coyotes" />
+	<property name="description_key" value="Hunt 3 Does, 3 Boars, 3 Wolves, and 3 Coyotes to receive a reward and move to the next animal stage." />
+	<property name="icon" value="ui_game_symbol_animal_tracker"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="medium"/>
+	<property name="shareable" value="false"/>
+
+			<objective type="AnimalKill" id="animalDoe" value="3"/>
+			<objective type="AnimalKill" id="animalBoar" value="3"/>
+			<objective type="AnimalKill" id="animalWolf" value="3"/>
+			<objective type="AnimalKill" id="animalCoyote" value="3"/>			
+		
+	<reward type="Exp" value="4000"/>
+	<reward type="Item" id="casinoCoin" value="1500"/>
+	<reward type="Quest" id="quest_eliminateanimals03">
+			<property name="chainquest" value="false"/>
+	</reward>
+	</quest>
+
+    <!-- Animals Part 3 -->
+	<quest id="quest_eliminateanimals03">
+	<property name="offer_key" value="Accept this quest to hunt a variety of animals through multiple smaller stages. You will receive Dukes and XP for completing each stage, and 2 Skill for the final stage. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="Bears, Mountain Lions, and Stags" />
+	<property name="subtitle_key" value="Bears, Mountain Lions, and Stags" />
+	<property name="description_key" value="Hunt 2 Bears, 2 Mountain Lions, and 2 Stags to receive a reward and move to the next animal stage." />
+	<property name="icon" value="ui_game_symbol_animal_tracker"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="medium"/>
+	<property name="shareable" value="false"/>
+
+			<objective type="AnimalKill" id="animalBear" value="2"/>
+			<objective type="AnimalKill" id="animalMountainLion" value="2"/>
+			<objective type="AnimalKill" id="animalStag" value="2"/>			
+		
+	<reward type="Exp" value="8000"/>
+	<reward type="Item" id="casinoCoin" value="3000"/>
+	<reward type="Quest" id="quest_eliminateanimals04">
+			<property name="chainquest" value="false"/>
+	</reward>
+	</quest>
+
+    <!-- Animals Part 4 -->
+	<quest id="quest_eliminateanimals04">
+	<property name="offer_key" value="Accept this quest to hunt a variety of animals through multiple smaller stages. You will receive Dukes and XP for completing each stage, and 2 Skill for the final stage. This Quest repeats in an endless loop." />       
+    <property name="name_key" value="Z Bear, BM Z Bunny, BM Z Chicken, Dire Wolf, and Grace" />
+	<property name="subtitle_key" value="Z Bear, BM Z Bunny, BM Z Chicken, Dire Wolf, and Grace" />
+	<property name="description_key" value="Hunt a Zombie Bear, Blood Moon Zombie Bunny, Blood Moon Zombie Chicken, Dire Wolf, and Grace Boar to receive a reward and restart the animal stages." />
+	<property name="icon" value="ui_game_symbol_animal_tracker"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="medium"/>
+	<property name="shareable" value="false"/>
+			
+			<objective type="AnimalKill" id="animalZombieBear" value="1"/>
+			<objective type="AnimalKill" id="animalBloodMoonZombieBunny" value="1"/>
+			<objective type="AnimalKill" id="animalBloodMoonZombieChicken" value="1"/>
+			<objective type="AnimalKill" id="animalDireWolf" value="1"/>
+			<objective type="AnimalKill" id="animalBossGrace" value="1"/>			
+		
+	<reward type="Exp" value="16000"/>
+	<reward type="Item" id="casinoCoin" value="6000"/>
+	<reward type="SkillPoints" value="2" chainreward="false"/>
+	<reward type="Quest" id="quest_eliminateanimals01">
+				<property name="chainquest" value="false"/>
+	</reward>
+	</quest>
+	
+	<!-- Nailgun Run - Utility Workers -->
+	<quest id="quest_nailgunutilityworkers">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Utility Workers with only the Nailgun. You can use the regular or more powerful steel nails to complete the task. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Utility Workers"/>
+		<property name="subtitle_key" value="50 Utility Workers"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Utility Workers with only the Nailgun. You can use the regular or more powerful steel nails to complete the task. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieNailgunUtilityWorker" value="50" phase="1"/>
+		<requirement type="Holding" id="meleeToolRepairT3Nailgun" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Stun Baton - Hazmat Entity -->
+	<quest id="quest_stunbatonhazmat">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Hazmat Entities with only the Stun Baton. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Hazmat Entities"/>
+		<property name="subtitle_key" value="50 Hazmat Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Hazmat Entities with only the Stun Baton. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieBatonHazmat" value="50" phase="1"/>
+		<requirement type="Holding" id="meleeWpnBatonT2StunBaton" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- SMG - Arlene -->
+	<quest id="quest_smgarlene">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Arlene Entities with only the SMG. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Arlene Entities"/>
+		<property name="subtitle_key" value="50 Arlene Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Arlene Entities with only the SMG. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieSMGArlene" value="50" phase="1"/>
+		<requirement type="Holding" id="gunHandgunT3SMG5" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- M60 - Demolition -->
+	<quest id="quest_m60demolition">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Demolition Entities with only the M60. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Demolition Entities"/>
+		<property name="subtitle_key" value="50 Demolition Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Demolition Entities with only the M60. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieDemolition,zombieM60Demolition" value="50" phase="1"/>
+		<requirement type="Holding" id="gunMGT3M60" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Tactical Assault Rifle Soldier -->
+	<quest id="quest_tariflesoldier">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Soldiers with only the Tactical Assault Rifle. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Soldiers"/>
+		<property name="subtitle_key" value="50 Soldiers"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Soldiers with only the Tactical Assault Rifle. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieTARifleSoldier" value="50" phase="1"/>
+		<requirement type="Holding" id="gunMGT2TacticalAR" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Steel Axe Lumberjack -->
+	<quest id="quest_steelaxelumberjack">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Lumberjacks with only the Steel Axe. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Lumberjacks"/>
+		<property name="subtitle_key" value="50 Lumberjacks"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Lumberjacks with only the Steel Axe. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieSteelAxeLumberjack" value="50" phase="1"/>
+		<requirement type="Holding" id="meleeToolAxeT2SteelAxe" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Machete Part Girl -->
+	<quest id="quest_machetepartygirl">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Party Girls with only the Machete. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Party Girls"/>
+		<property name="subtitle_key" value="50 Party Girls"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Party Girls with only the Machete. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieMachetePartyGirl" value="50" phase="1"/>
+		<requirement type="Holding" id="meleeWpnBladeT3Machete" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Pistol Business Man -->
+	<quest id="quest_pistolbusinessman">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Businessmen with only the Pistol. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Businessmen"/>
+		<property name="subtitle_key" value="50 Businessmen"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Businessmen with only the Pistol. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombiePistolBusinessMan" value="50" phase="1"/>
+		<requirement type="Holding" id="gunHandgunT1Pistol" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Compound Spiders -->
+	<quest id="quest_compoundspider">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Spiders with only the Compound Bow. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Spiders"/>
+		<property name="subtitle_key" value="50 Spiders"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Spiders with only the Compound Bow. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombiePrepperSpiderFeralGlider,zombiePrepperSpiderFeralBomber" value="50" phase="1"/>
+		<requirement type="Holding" id="gunBowT3CompoundBow" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Swiss Vetterli Boe -->
+	<quest id="quest_swissvetterliboe">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Boe Entities with only the Swiss Vetterli Rifle. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Boe Entities"/>
+		<property name="subtitle_key" value="50 Boe Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Boe Entities with only the Swiss Vetterli Rifle. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombiePrepperSpiderFeralGlider,zombiePrepperSpiderFeralBomber" value="50" phase="1"/>
+		<requirement type="Holding" id="gunRifleT2LeverActionRifleSwissVetterli" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Chainsaw Moe -->
+	<quest id="quest_chainsawmoe">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Moe Entities with only the Chainsaw. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Moe Entities"/>
+		<property name="subtitle_key" value="50 Moe Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Moe Entities with only the Chainsaw. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieChainsawMoe" value="50" phase="1"/>
+		<requirement type="Holding" id="meleeToolAxeT3Chainsaw" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Desert Vulture Tom Clark -->
+	<quest id="quest_desertvulturetomclark">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Tom Clark Entities with only the Desert Vulture. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Tom Clark Entities"/>
+		<property name="subtitle_key" value="50 Tom Clark Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Tom Clark Entities with only the Desert Vulture. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieDesertVultureTomClark" value="50" phase="1"/>
+		<requirement type="Holding" id="gunHandgunT3DesertVulture" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Pump Shotgun Biker -->
+	<quest id="quest_pumpshotgunbiker">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Biker Entities with only the Pump Shotgun. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Biker Entities"/>
+		<property name="subtitle_key" value="50 Biker Entities"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Biker Entities with only the Pump Shotgun. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombiePumpShotgunBiker" value="50" phase="1"/>
+		<requirement type="Holding" id="gunShotgunT2PumpShotgun" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	</append>
+
+</Preppocalypse>
