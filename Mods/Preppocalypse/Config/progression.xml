@@ -100,7 +100,7 @@
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']">
 		<effect_group>		
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
-				tags="foodFriedCatfish,foodCatfishNuggetsOnRice,foodBaconAndEggsAndAcornCookies,foodPineConeJamGriddleCakes,foodMisoYakiOnigiri"/>
+				tags="foodFriedCatfish,foodCatfishNuggetsOnRice,foodBaconAndEggsAndAcornBiscuits,foodPineConeJamGriddleCakes,foodMisoYakiOnigiri"/>
 		</effect_group>
 		<effect_group>		
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"

@@ -2191,6 +2191,17 @@
 	<!-- QUESTS -->
 	
 	<!-- Admin Note item to restart quests if removed/bugging out -->
+	
+	<!-- Prepper Starting Quest -->
+		<item name="quest_prepperstockpile01">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="DescriptionKey" value="quest_prepperstockpile01Desc"/>
+			<property name="CustomIcon" value="quest_prepperstockpile01"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_prepperstockpile01"/>
+			</property>
+		</item>
 		
 	<!-- Looping Zombie Elimination Quest -->
 		<item name="quest_eliminatezombies10">
