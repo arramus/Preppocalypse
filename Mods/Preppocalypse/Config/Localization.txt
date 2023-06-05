@@ -201,6 +201,11 @@ gunRifleT2LeverActionRifleSwissVetterli,items,Gun,,,Swiss Vetterli Rifle,,,,,,,,
 gunRifleT2LeverActionRifleSwissVetterliDesc,items,Gun,,,"This restored Swiss Vetterli Rifle has been customised to chamber a centrefire cartridge; namely .44mm ammo. It is a cross between a Winchester and an early generation Assault Rifle. Does not accept a long range scope.",,,,,,,,,,,,,
 gunRifleT2LeverActionRifleSwissVetterliSchematic,items,Gun,,,Swiss Vetterli Rifle Schematic,,,,,,,,,,,,,
 
+CactusTrap,blocks,Block,,,Trap - Cactus,,,,,,,,,,,,,
+CactusTrapDesc,blocks,Block,,,"This Cactus Trap can be placed on a surface. It will damage both zombies and players with bleed damage. Can be repaired and picked up.",,,,,,,,,,,,,
+TarTrap,blocks,Block,,,Trap - Tar,,,,,,,,,,,,,
+TarTrapDesc,blocks,Block,,,"This Tar Trap can be placed on a surface. It will slow both zombies and players. Can be repaired and picked up.",,,,,,,,,,,,,
+
 animalBloodMoonZombieBunny,entityclasses,Entity,,,Blood Moon Zombie Bunny,,,,,,,,,,,,,
 animalBloodMoonZombieSnake,entityclasses,Entity,,,Blood Moon Zombie Snake,,,,,,,,,,,,,
 animalBloodMoonZombieChicken,entityclasses,Entity,,,Blood Moon Zombie Chicken,,,,,,,,,,,,,
@@ -241,6 +246,8 @@ loadingTipPrepperUltraTriathlete,UI,Loading Screen,x,,"Skill level 4 in Cardio? 
 loadingTipPrepperUltraTriathlete_title,UI,Loading Screen,x,,Ultra Triathlete,,,,,,,,,,,,,
 loadingTipPrepperKnowledge,UI,Loading Screen,x,,"Prepper Knowledge is found under the Intellect Attribute tree, and can accelerate XP based on prior experience and knowledge.",,,,,,,,,,,,,
 loadingTipPrepperKnowledge_title,UI,Loading Screen,x,,Prepper Knowledge,,,,,,,,,,,,,
+loadingTipPrepperTraps,UI,Loading Screen,x,,"Preppers can place a sticky Tar Trap or Cactus Trap to impede the movement of hostiles. These traps can be crafted on the workbench. Repair them when damaged and pick them up to place them elsewhere.",,,,,,,,,,,,,
+loadingTipPrepperTraps_title,UI,Loading Screen,x,,Prepper Traps,,,,,,,,,,,,,
 
 quest_prepperstockpile01,items,Quest - Challenge,,,"Prepper Stockpile",,,,,,,,,,,,,
 quest_prepperstockpile01Desc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to restock. Follow the instructions to craft, collect, and place items in a progressive order. Earn XP, Items, and Skill Points at various stage points.\n\nThis Quest can only be completed once.",,,,,,,,,,,,,

@@ -44,7 +44,8 @@
 		<tip key="loadingTipPrepperCustomMods"/>
 		<tip key="loadingTipPrepperToolsWeapons"/>
 		<tip key="loadingTipPrepperUltraTriathlete"/>
-		<tip key="loadingTipPrepperKnowledge"/>		
+		<tip key="loadingTipPrepperKnowledge"/>
+		<tip key="loadingTipPrepperTraps"/>		
 	</append>
 
 </Preppocalypse>

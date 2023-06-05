@@ -942,6 +942,36 @@
 	<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
 </block>
 
+<!-- Oakraven's Traps -->
+
+<block name="CactusTrap">
+	<property name="Material" value="MbarbedWire"/>
+	<property name="CustomIcon" value="cactustrap"/>
+	<property name="Shape" value="ModelEntity" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="#@modfolder:Resources/OakTraps.unity3d?CactisTrap"/>
+	<property name="Group" value="Tools/Traps"/>	
+	<property name="BuffsWhenWalkedOn" value="triggerBleeding"/>
+	<property name="CanPickup" value="true"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+	</property>	
+</block>
+
+<block name="TarTrap">
+	<property name="Material" value="MbarbedWire"/>
+	<property name="CustomIcon" value="tartrap"/>
+	<property name="Shape" value="ModelEntity" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="#@modfolder:Resources/OakTraps.unity3d?TarTrap"/>
+	<property name="Group" value="Tools/Traps"/>	
+	<property name="BuffsWhenWalkedOn" value="buffTar"/>
+	<property name="CanPickup" value="true"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+	</property>	
+</block>
+
 	</append>
 
 </Preppocalypse>
