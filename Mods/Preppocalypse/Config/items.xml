@@ -11,7 +11,9 @@
 	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']/property[@name='Upgrade_hit_offset']/@value">-5</set><!-- 1 Hit Upgrade -->
 	<set xpath="/items/item[@name='meleeToolRepairT3Nailgun']/effect_group/passive_effect[@name='MagazineSize']/@value">25</set><!-- Mag Size -->
 	<append xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,resourceSteelNail</append><!-- Adding Steel Nail for the Nailgun -->	
-	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='MagazineSize']/@value">3</set><!-- 3 Shots per mag -->
+	<append xpath="/items/item[@name='meleeToolPickT3Auger']/property[@name='Tags']/@value">,motorToolAuger</append><!-- Quiet Auger -->
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='MagazineSize']/@value">3</set><!-- 3 Shots per mag -->	
+
 	<!-- Ammo Stacking -->
 	<set xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']/@value">3000</set><!-- x10 of default -->	
 	<set xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']/@value">1500</set><!-- x10 of default -->
