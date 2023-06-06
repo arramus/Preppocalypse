@@ -208,6 +208,7 @@
 	<property name="MultiBlockDim" value="2,2,2"/>
 	<property name="ModelOffset" value="-0.5,0.5,0"/>
 	<property class="RepairItems"> <property name="resourceWood" value="2"/> </property>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property class="UpgradeBlock">	
 		<property name="ToBlock" value="WoodCoopChicks"/>
 		<property name="Item" value="CaughtChick"/>
@@ -223,7 +224,7 @@
 	<property name="Extends" value="WoodCoopEmpty"/>		
 	<property name="CreativeMode" value="Player"/>
 	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
-	<property name="Group" value="Tools/Traps"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property name="CustomIcon" value="woodcoop"/>
 	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
 	<property name="ItemTypeIcon" value="all_blocks"/>
@@ -572,6 +573,7 @@
 	<property name="Model" value="#@modfolder:Resources/BeeHivesA20.unity3d?squareBeeHiveGold1"/>	
 	<property name="CreativeMode" value="Player"/>
 	<property class="RepairItems"> <property name="resourceWood" value="2"/> </property>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="SquareBeeHiveQueen"/>
 		<property name="Item" value="QueenBee"/>
@@ -586,7 +588,7 @@
 <block name="BeeHiveVariantHelper">
 	<property name="Extends" value="SquareHiveEmpty"/>	
 	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
-	<property name="Group" value="Tools/Traps"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="squarebeehive3Gold"/>
 	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
@@ -739,7 +741,7 @@
 	<property name="DisplayInfo" value="Name"/>
 	<property name="CustomIcon" value="resourceFishTrapCone"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="Group" value="Tools/Traps"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
 	<property name="Material" value="Mwood_weak"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
