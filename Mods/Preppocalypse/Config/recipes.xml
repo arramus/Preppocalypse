@@ -4,6 +4,16 @@
 
 	<!-- Vanilla support items -->
 	
+	<!-- Gazz Muffler Mod -->
+	
+	<recipe name="modGazzMuffler" count="1">
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceCloth" count="10"/>
+		<ingredient name="resourceLeather" count="2"/>
+	</recipe>
+	
 	<!-- Steel Nail for ammo -->
 	<recipe name="resourceSteelNail" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 		<ingredient name="unit_iron" count="2"/>

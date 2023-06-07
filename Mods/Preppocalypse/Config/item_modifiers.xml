@@ -2,6 +2,24 @@
 
 <append xpath="/item_modifiers">
 
+<!-- Gazz Muffler Mod -->
+
+	<item_modifier name="modGazzMuffler" installable_tags="head" modifier_tags="misc" blocked_tags="noMods,clothing" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="Material" value="Msteel"/>
+		<property name="Group" value="Mods,Tool/Weapon Mods,Tools/Traps"/>
+		<property name="EconomicValue" value="10"/>
+		
+			<effect_group>
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="SetAudioMixerState" state="Deafened" enabled="true"/>
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AddBuff" buff="buffmodGazzMufflerIcon"/>
+					<requirement name="HoldingItemHasTags" tags="motorTool"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetAudioMixerState" state="Deafened" enabled="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffmodGazzMufflerIcon"/>
+				</triggered_effect>					
+			</effect_group>
+	</item_modifier>
+
 <!-- Running Shoes High Performance Mod -->
 
   <item_modifier name="modArmorRunningShoesHP" installable_tags="armorFeet" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">

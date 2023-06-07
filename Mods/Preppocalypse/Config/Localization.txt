@@ -69,6 +69,8 @@ modDyeMediumJungleGreen,item_modifiers,mod,,,Dye: Jungle Green,,,,,,,,,,,,,
 modWeaponMaintenance,item_modifiers,mod,,,Weapon Maintenance Mod,,,,,,,,,,,,,
 modWeaponMaintenanceDesc,item_modifiers,mod,,,"The Weapon Maintenance Mod lowers degradation in weapons by 50% by reducing wear and tear.",,,,,,,,,,,,,
 modWeaponMaintenanceSchematic,item_modifiers,Mod,,,Weapon Maintenance Mod Schematic,,,,,,,,,,,,,
+modGazzMuffler,item_modifiers,Mod,,,Gazz Muffler Mod,,,,,,,,,,,,,
+modGazzMufflerDesc,item_modifiers,Mod,,,"This Gazz Muffler Mod can be added to Head Armor and drastically reduces all volume when using an Auger or Chainsaw.",,,,,,,,,,,,,
 
 foodAcornFlour,items,Food,,,Acorn Flour,,,,,,,,,,,,,
 foodAcornFlourDesc,items,Food,,,"Acorn Flour can be ground and processed on the player for adding to recipes. Cures 1% infection.",,,,,,,,,,,,,
