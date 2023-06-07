@@ -4,7 +4,7 @@
 
 <!-- Gazz Muffler Mod -->
 
-	<item_modifier name="modGazzMuffler" installable_tags="head" modifier_tags="misc" blocked_tags="noMods,clothing" type="attachment">
+	<item_modifier name="modGazzMuffler" installable_tags="armorHead" modifier_tags="muffler" blocked_tags="noMods,clothing" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
 		<property name="Material" value="Msteel"/>
 		<property name="Group" value="Mods,Tool/Weapon Mods,Tools/Traps"/>
