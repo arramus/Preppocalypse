@@ -1,5 +1,46 @@
 ﻿<Preppocalypse>
 
+	<!-- Vanilla Updates -->
+	<!-- Decor/Misc Group Switching for Compliance -->
+ 	<append xpath="/blocks/block[@name='cntWoodFurnitureBlockVariantHelper']/property[@name='Group']/@value">,Decor/Miscellaneous</append>
+ 	<append xpath="/blocks/block[@name='cntWoodFurnitureBlockVariantHelper2']/property[@name='Group']/@value">,Decor/Miscellaneous</append>	
+	<!-- Deco Block Function -->	
+ 	<append xpath="/blocks/block[@name='flagPoleWhiteRiver']">
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
+	</append>
+ 	<append xpath="/blocks/block[@name='flagPoleAmerican']">
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
+	</append>
+ 	<append xpath="/blocks/block[@name='crushedCars']">
+		<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
+	<property class="RepairItems">
+		<property name="resourceScrapIron" value="70"/>
+	</property>
+	</append>
+ 	<append xpath="/blocks/block[@name='cntRetroFridgeVer1Closed']"> <!-- Retro and extending Modern Fridge -->
+		<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
+	</append>
+	<!-- Deco Block Harvesting -->
+ 	<append xpath="/blocks/block[@name='decoWildWestWagon']">
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>	
+	<drop event="Harvest" name="resourceScrapIron" count="20,30" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="50,100" tag="salvageHarvest"/>
+	</append>
+ 	<append xpath="/blocks/block[@name='decoWildWestWagonWheelBack']">
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>	
+	<drop event="Harvest" name="resourceScrapIron" count="5,10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="5,10" tag="salvageHarvest"/>
+	</append>
+ 	<append xpath="/blocks/block[@name='wineBarrel']">
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>	
+	<drop event="Harvest" name="resourceScrapIron" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="2,5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="drinkJarRiverWater" count="1" prob="0.3" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,2"/>
+	</append>
+
 	<!-- A19 Farming For A20 by Syco54645 -->
 
 	<append xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']">
