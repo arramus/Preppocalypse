@@ -1,12 +1,14 @@
 <Preppocalypse>
 
-	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">6, 11</set> <!-- Bicycle Default 5, 10 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">6, 12</set> <!-- Bicycle Default 5, 10 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='waterDrag_y_velScale_velMaxScale']/@value">1.0, 0.5, .3</set> <!-- 1.7, .9, .2 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8, 12</set> <!-- Minibike 7, 10 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='waterDrag_y_velScale_velMaxScale']/@value">1.0, 0.5, .3</set> <!-- 1.5, .9, .15 -->
-	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">10, 15</set> <!-- Motorcycle 9, 14 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='tiltAngleMax']/@value">5</set> <!-- Motorcycle 20 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='hopForce']/@value">5.5, .025</set> <!-- Motorcycle 1, .8 -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">11, 16</set> <!-- Motorcycle 9, 14 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='waterDrag_y_velScale_velMaxScale']/@value">1.0, 0.5, .3</set> <!-- 1.7, .9, .1 -->
-	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">10, 15</set> <!-- 4x4 Truck 9, 14 -->
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">11, 16</set> <!-- 4x4 Truck 9, 14 -->
 	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='waterDrag_y_velScale_velMaxScale']/@value">1.0, 0.5, .3</set> <!-- 1.8, .9, .1 -->
 	
 	<append xpath="/vehicles/vehicle[@name='vehicleBicycle']">
