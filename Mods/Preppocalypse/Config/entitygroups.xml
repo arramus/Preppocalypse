@@ -53,7 +53,8 @@
 	<!-- Animals -->
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		<entity name="animalBossZombieGrace" prob="10"/>		
+		<entity name="animalBossZombieGrace" prob="9"/>
+		<entity name="animalZombieLargePlasmaVulture" prob="9"/>		
 	</append>
 	
 	<!-- Snow -->
@@ -533,13 +534,14 @@
 	
 	<!-- Special Entities Spawning with Demolition Entity for Horde Night -->	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieDemolition']"> <!-- GS 147 -->
-		<entity name="zombiePrepperSpiderFeralGlider" prob="0.35"/>
-		<entity name="zombiePrepperSpiderFeralBomber" prob="0.35"/>
-		<entity name="animalZombieBear" prob="0.35"/>
-		<entity name="animalBossZombieGrace" prob="0.35"/>
 		<entity name="animalBloodMoonZombieBunny" prob="0.35"/>
 		<entity name="animalBloodMoonZombieChicken" prob="0.35"/>
-		<entity name="zombieM60Demolition" prob="0.25"/>
+		<entity name="animalZombieBear" prob="0.3"/>
+		<entity name="animalBossZombieGrace" prob="0.3"/>
+		<entity name="zombieM60Demolition" prob="0.2"/>
+		<entity name="zombiePrepperSpiderFeralGlider" prob="0.1"/>
+		<entity name="zombiePrepperSpiderFeralBomber" prob="0.1"/>
+		<entity name="animalZombieLargePlasmaVulture" prob="0.1"/>
 	</insertAfter>
 
 </Preppocalypse>
