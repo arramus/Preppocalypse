@@ -53,7 +53,7 @@
 	<!-- Animals -->
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		<entity name="animalBossGrace" prob="10"/>		
+		<entity name="animalBossZombieGrace" prob="10"/>		
 	</append>
 	
 	<!-- Snow -->

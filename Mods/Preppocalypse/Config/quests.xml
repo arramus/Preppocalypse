@@ -600,9 +600,9 @@
     <!-- Animals Part 4 -->
 	<quest id="quest_eliminateanimals04">
 	<property name="offer_key" value="Accept this quest to hunt a variety of animals through multiple smaller stages. You will receive Dukes and XP for completing each stage, and 2 Skill for the final stage. This Quest repeats in an endless loop." />       
-    <property name="name_key" value="Z Bear, BM Z Bunny, BM Z Chicken, Dire Wolf, and Grace" />
-	<property name="subtitle_key" value="Z Bear, BM Z Bunny, BM Z Chicken, Dire Wolf, and Grace" />
-	<property name="description_key" value="Hunt a Zombie Bear, Blood Moon Zombie Bunny, Blood Moon Zombie Chicken, Dire Wolf, and Grace Boar to receive a reward and restart the animal stages." />
+    <property name="name_key" value="Z Bear, BM Z Bunny, BM Z Chicken, Dire Wolf, and Z Grace" />
+	<property name="subtitle_key" value="Z Bear, BM Z Bunny, BM Z Chicken, Dire Wolf, and Z Grace" />
+	<property name="description_key" value="Hunt a Zombie Bear, Blood Moon Zombie Bunny, Blood Moon Zombie Chicken, Dire Wolf, and Zombie Grace Boar to receive a reward and restart the animal stages." />
 	<property name="icon" value="ui_game_symbol_animal_tracker"/>
 	<property name="repeatable" value="true"/>
 	<property name="category_key" value="Quest"/>
@@ -613,7 +613,7 @@
 			<objective type="AnimalKill" id="animalBloodMoonZombieBunny" value="1"/>
 			<objective type="AnimalKill" id="animalBloodMoonZombieChicken" value="1"/>
 			<objective type="AnimalKill" id="animalDireWolf" value="1"/>
-			<objective type="AnimalKill" id="animalBossGrace" value="1"/>			
+			<objective type="AnimalKill" id="animalBossZombieGrace" value="1"/>			
 		
 	<reward type="Exp" value="16000"/>
 	<reward type="Item" id="casinoCoin" value="6000"/>
