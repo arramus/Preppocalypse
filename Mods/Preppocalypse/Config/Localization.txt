@@ -196,6 +196,8 @@ glassClearBulletproofPlateCurved,blocks,block,,,Clear Bulletproof Glass Curved P
 
 playerWoodBurningPrepperStove,blocks,Block,,,Wood Burning Prepper Stove,,,,,,,,,,,,,
 playerWoodBurningPrepperStoveDesc,blocks,Block,,,"This Wood Burning Prepper Stove provides an alternative cooking source to the campfire.",,,,,,,,,,,,,
+resourceCementMixerConcreteBundle,items,Item,,,Stack of Concrete (1000),,,,,,,,,,,,,
+resourceCementMixerConcreteBundleDesc,items,Item,,,"This is a compact stack of concrete. 'Open' this item to open and unpack it. This stack of concrete uses 20% less resources than the same amount in single units.",,,,,,,,,,,,,
 
 resourceSteelNail,items,Item,,,Steel Nails,,,,,,,,,,,,,
 resourceSteelNailDesc,items,Item,,,"Steel nails are used for... shooting at zombies. Steel nails are stronger than regular nails and cause more entity damage.",,,,,,,,,,,,,
@@ -211,8 +213,8 @@ TarTrapDesc,blocks,Block,,,"This Tar Trap can be placed on a surface. It will sl
 animalBloodMoonZombieBunny,entityclasses,Entity,,,Blood Moon Zombie Bunny,,,,,,,,,,,,,
 animalBloodMoonZombieSnake,entityclasses,Entity,,,Blood Moon Zombie Snake,,,,,,,,,,,,,
 animalBloodMoonZombieChicken,entityclasses,Entity,,,Blood Moon Zombie Chicken,,,,,,,,,,,,,
-zombiePrepperSpiderFeralBomber,entityclasses,Entity,,,Spider Drone Pipe Bomber,,,,,,,,,,,,,
 animalBossZombieGrace,entityclasses,Entity,,,Zombie Grace,,,,,,,,,,,,,
+zombiePrepperSpiderFeralBomber,entityclasses,Entity,,,Spider Drone Pipe Bomber,,,,,,,,,,,,,
 zombiePrepperSpiderFeralGlider,entityclasses,Entity,,,Spider Glider Fire Starter,,,,,,,,,,,,,
 zombieM60Demolition,entityclasses,Entity,,,M60 Demolition,,,,,,,,,,,,,
 zombieSMGArlene,entityclasses,Entity,,,SMG Arlene,,,,,,,,,,,,,
