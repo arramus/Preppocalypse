@@ -157,6 +157,10 @@
 	<!-- Bicycle Tags -->
 	<append xpath="/items/item[@name='vehicleBicyclePlaceable']/property[@name='Tags']/@value">,vseat</append><!-- Adding the seat tag -->
 	
+	<append xpath="/items">
+	
+	<!-- Concrete Bundles -->		
+	
 	<item name="resourceCementMixerConcreteBundle">
 		<property name="Extends" value="resourceRockSmallBundle"/>
 		<property name="CustomIcon" value="resourceConcreteMix"/>
@@ -166,8 +170,6 @@
 			<property name="Create_item_count" value="1000"/>
 		</property>
 	</item>
-		
-	<append xpath="/items">
 	
 	<!-- Nailgun Alternate Ammo -->
 	
