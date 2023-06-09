@@ -22,6 +22,15 @@
  	<append xpath="/blocks/block[@name='cntRetroFridgeVer1Closed']"> <!-- Retro and extending Modern Fridge -->
 		<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
 	</append>
+ 	<append xpath="/blocks/block[@name='trapSpikesIronDmg0']">
+		<property name="CanPickup" value="true"/>
+	</append>
+ 	<append xpath="/blocks/block[@name='trapSpikesWoodDmg0']">
+		<property name="CanPickup" value="true"/>
+	</append>
+ 	<append xpath="/blocks/block[@name='barbedFence']">
+		<property name="CanPickup" value="true"/>
+	</append>
 	<!-- Deco Block Harvesting -->
  	<append xpath="/blocks/block[@name='decoWildWestWagon']">
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>	
