@@ -452,6 +452,7 @@
 	<property name="SoundFootstepModifier" value="bear_footstep"/>
 
 	<!-- Gameplay zombieDemolition -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="HandItem" value="meleeHandZombieM60Demolition"/>
 	<property name="JumpMaxDistance" value="1, 2"/>
 	<property name="PainResistPerHit" value=".5"/>
@@ -496,6 +497,7 @@
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
 
 	<!-- Gameplay zombieArleneRadiated -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="HandItem" value="meleeHandZombieSMGArlene"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -528,6 +530,7 @@
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
 
 	<!-- Gameplay zombieSoldierRadiated -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="HandItem" value="meleeHandZombieTARifleSoldier"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -640,6 +643,7 @@
 	<property name="HandItem" value="meleeHandZombiePistolBusinessMan"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<!-- Gameplay zombieBusinessManRadiated -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 	<property name="ExperienceGain" value="825"/><!-- XP grunt feral -->
@@ -672,6 +676,7 @@
 	<property name="HandItem" value="meleeHandZombieNailgunUtilityWorker"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<!-- Gameplay zombieUtilityWorkerRadiated -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1320"/><!-- XP grunt radiated -->
@@ -704,6 +709,7 @@
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 	<!-- Gameplay zombieBoeRadiated --> <!-- + 10% hits and gains -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1320"/><!-- XP grunt radiated -->
@@ -759,6 +765,7 @@
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
 
 	<!-- Gameplay zombieTomClarkRadiated -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1320"/><!-- XP grunt radiated -->
@@ -792,6 +799,7 @@
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
 
 	<!-- Gameplay zombieBikerRadiated -->
+	<property name="ExplodeHealthThreshold" value="0"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1650"/><!-- XP strong radiated -->

@@ -193,8 +193,8 @@
 		<property name="LifeTime" value=".75"/>
 	</property>
 	<effect_group name="resourceNail" tiered="false"> <!-- nail -->
-		<passive_effect name="EntityDamage" operation="base_set" value="12"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="2"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="20"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="20"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 		<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
