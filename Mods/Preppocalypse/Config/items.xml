@@ -2457,7 +2457,7 @@
 			</property>
 		</item>
 		
-	<!-- Pump Shotgun - Biker Entity -->	
+	<!-- Pipe Baton - Fat Cop -->
 		<item name="quest_batonfatcop">
 			<property name="Extends" value="challengeQuestMaster"/>
 			<property name="Material" value="Mpaper"/> <property name="Weight" value="67"/>
@@ -2466,6 +2466,18 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_batonfatcop"/>
+			</property>
+		</item>
+		
+	<!-- Steel Club - Big Momma -->
+		<item name="quest_steelclubfemalefat">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="Material" value="Mpaper"/> <property name="Weight" value="67"/>
+			<property name="DescriptionKey" value="quest_steelclubfemalefatDesc"/>
+			<property name="CustomIcon" value="quest_steelclubfemalefat"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_steelclubfemalefat"/>
 			</property>
 		</item>
 

@@ -762,10 +762,10 @@
 	
 	<!-- SMG - Arlene -->
 	<quest id="quest_smgarlene">
-		<property name="offer_key" value="Accept this quest to eliminate 50 Arlene Entities with only the SMG. XP, Dukes, and 1 Skill for your troubles."/>
-		<property name="name_key" value="50 Arlene Entities"/>
-		<property name="subtitle_key" value="50 Arlene Entities"/>
-		<property name="description_key" value="Accept this quest to eliminate 50 Arlene Entities with only the SMG. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="offer_key" value="Accept this quest to eliminate 50 Arlenes with only the SMG. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Arlenes"/>
+		<property name="subtitle_key" value="50 Arlenes"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Arlenes with only the SMG. XP, Dukes, and 1 Skill for your troubles."/>
 		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -902,17 +902,17 @@
 	
 	<!-- Swiss Vetterli Boe -->
 	<quest id="quest_swissvetterliboe">
-		<property name="offer_key" value="Accept this quest to eliminate 50 Boe Entities with only the Swiss Vetterli Rifle. XP, Dukes, and 1 Skill for your troubles."/>
-		<property name="name_key" value="50 Boe Entities"/>
-		<property name="subtitle_key" value="50 Boe Entities"/>
-		<property name="description_key" value="Accept this quest to eliminate 50 Boe Entities with only the Swiss Vetterli Rifle. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="offer_key" value="Accept this quest to eliminate 50 Boes with only the Swiss Vetterli Rifle. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Boes"/>
+		<property name="subtitle_key" value="50 Boes"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Boes with only the Swiss Vetterli Rifle. XP, Dukes, and 1 Skill for your troubles."/>
 		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="shareable" value="false"/>
 		
-		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombiePrepperSpiderFeralGlider,zombiePrepperSpiderFeralBomber" value="50" phase="1"/>
+		<objective type="ZombieKill" id="zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieSwissVetterliBoe" value="50" phase="1"/>
 		<requirement type="Holding" id="gunRifleT2LeverActionRifleSwissVetterli" phase="1"/>
 		
 		<reward type="Exp" value="5000"/>
@@ -922,10 +922,10 @@
 	
 	<!-- Chainsaw Moe -->
 	<quest id="quest_chainsawmoe">
-		<property name="offer_key" value="Accept this quest to eliminate 50 Moe Entities with only the Chainsaw. XP, Dukes, and 1 Skill for your troubles."/>
-		<property name="name_key" value="50 Moe Entities"/>
-		<property name="subtitle_key" value="50 Moe Entities"/>
-		<property name="description_key" value="Accept this quest to eliminate 50 Moe Entities with only the Chainsaw. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="offer_key" value="Accept this quest to eliminate 50 Moes with only the Chainsaw. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Moes"/>
+		<property name="subtitle_key" value="50 Moes"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Moes with only the Chainsaw. XP, Dukes, and 1 Skill for your troubles."/>
 		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -942,10 +942,10 @@
 	
 	<!-- Desert Vulture Tom Clark -->
 	<quest id="quest_desertvulturetomclark">
-		<property name="offer_key" value="Accept this quest to eliminate 50 Tom Clark Entities with only the Desert Vulture. XP, Dukes, and 1 Skill for your troubles."/>
-		<property name="name_key" value="50 Tom Clark Entities"/>
-		<property name="subtitle_key" value="50 Tom Clark Entities"/>
-		<property name="description_key" value="Accept this quest to eliminate 50 Tom Clark Entities with only the Desert Vulture. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="offer_key" value="Accept this quest to eliminate 50 Tom Clarks with only the Desert Vulture. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Tom Clarks"/>
+		<property name="subtitle_key" value="50 Tom Clarks"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Tom Clarks with only the Desert Vulture. XP, Dukes, and 1 Skill for your troubles."/>
 		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -962,10 +962,10 @@
 	
 	<!-- Pump Shotgun Biker -->
 	<quest id="quest_pumpshotgunbiker">
-		<property name="offer_key" value="Accept this quest to eliminate 50 Biker Entities with only the Pump Shotgun. XP, Dukes, and 1 Skill for your troubles."/>
-		<property name="name_key" value="50 Biker Entities"/>
-		<property name="subtitle_key" value="50 Biker Entities"/>
-		<property name="description_key" value="Accept this quest to eliminate 50 Biker Entities with only the Pump Shotgun. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="offer_key" value="Accept this quest to eliminate 50 Bikers with only the Pump Shotgun. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Bikers"/>
+		<property name="subtitle_key" value="50 Bikers"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Bikers with only the Pump Shotgun. XP, Dukes, and 1 Skill for your troubles."/>
 		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -980,7 +980,7 @@
 		<reward type="SkillPoints" value="1" chainreward="false"/>
 	</quest>
 	
-	<!-- Pump Shotgun Biker -->
+	<!-- Pipe Baton Fat Cop -->
 	<quest id="quest_batonfatcop">
 		<property name="offer_key" value="Accept this quest to eliminate 50 Fat Cops with only the Pipe Baton. XP, Dukes, and 1 Skill for your troubles."/>
 		<property name="name_key" value="50 Fat Cops"/>
@@ -994,6 +994,26 @@
 		
 		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieBatonFatCop" value="50" phase="1"/>
 		<requirement type="Holding" id="meleeWpnBatonT0PipeBaton" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Steel Club Big Momma -->
+	<quest id="quest_steelclubfemalefat">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Big Mommas with only the Steel Club. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Big Mommas"/>
+		<property name="subtitle_key" value="50 Big Mommas"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Big Mommas with only the Steel Club. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieSteelClubFemaleFat" value="50" phase="1"/>
+		<requirement type="Holding" id="meleeWpnClubT3SteelClub" phase="1"/>
 		
 		<reward type="Exp" value="5000"/>
 		<reward type="Item" id="casinoCoin" value="2500"/>
