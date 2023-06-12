@@ -205,10 +205,17 @@
 
 		<buff name="zombieSteelClubFemaleFatDeco" hidden="true">
 			<effect_group>				
-				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="0.09,0.03,-0" local_rotation="90,-90,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="0.09,0.03,-0.03" local_rotation="90,-90,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-0.09,-0.03,0" local_rotation="-90,-90,270" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
 			</effect_group>
-		</buff>		
+		</buff>
+
+		<buff name="zombieBoltNurseDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_steelPrefab.prefab" local_offset="0.06,0.015,-0.09" local_rotation="0,180,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_steelPrefab.prefab" local_offset="-0.06,-0.015,0.09" local_rotation="0,0,270" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>			
 		
 	</append>
 	

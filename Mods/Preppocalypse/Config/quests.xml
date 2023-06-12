@@ -1020,6 +1020,26 @@
 		<reward type="SkillPoints" value="1" chainreward="false"/>
 	</quest>
 	
+	<!-- Bolt Nurse -->
+	<quest id="quest_boltnurse">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Nurses with only the Compound Crossbow. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="name_key" value="50 Nurses"/>
+		<property name="subtitle_key" value="50 Nurses"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Nurses with only the Compound Crossbow. XP, Dukes, and 1 Skill for your troubles."/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombieBoltNurse" value="50" phase="1"/>
+		<requirement type="Holding" id="gunBowT3CompoundCrossbow" phase="1"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
 	</append>
 
 </Preppocalypse>

@@ -31,6 +31,7 @@
 		<entity name="zombiePumpShotgunBiker" prob="0.75"/>
 		<entity name="zombieBatonFatCop" prob="0.75"/>
 		<entity name="zombieSteelClubFemaleFat" prob="0.75"/>
+		<entity name="zombieBoltNurse" prob="0.75"/>
 	</append>
 
 	<!-- All at Night Wasteland -->	
@@ -51,7 +52,8 @@
 		<entity name="zombieDesertVultureTomClark" prob="1.25"/>
 		<entity name="zombiePumpShotgunBiker" prob="1.25"/>
 		<entity name="zombieBatonFatCop" prob="1.25"/>
-		<entity name="zombieSteelClubFemaleFat" prob="1.25"/>		
+		<entity name="zombieSteelClubFemaleFat" prob="1.25"/>
+		<entity name="zombieBoltNurse" prob="1.25"/>	
 	</append>
 	
 	<!-- Animals -->
@@ -413,7 +415,7 @@
 		<entity name="zombieChainsawMoe" prob="0.9"/>
 	</insertAfter>
 	
-	<!-- Group Desert Vulture Tom Clerk pegged to Tom Clerk Radiated where possible -->
+	<!-- Group Desert Vulture Tom Clerk pegged to Tom Clerk Radiated -->
 
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieGhostTownGroupGS')]/entity[@name='zombieTomClarkRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
 		<entity name="zombieDesertVultureTomClark" prob="0.2"/>
@@ -439,7 +441,7 @@
 		<entity name="zombieDesertVultureTomClark" prob="0.9"/>
 	</insertAfter>
 	
-	<!-- Group Pump Shotgun Biker pegged to Biker Radiated where possible -->
+	<!-- Group Pump Shotgun Biker pegged to Biker Radiated -->
 
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieBikerBarGroupGS')]/entity[@name='zombieBikerRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
 		<entity name="zombiePumpShotgunBiker" prob="0.25"/>
@@ -465,7 +467,7 @@
 		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
 	</insertAfter>
 	
-	<!-- Group Pipe Baton Fat Cop pegged to Fat Cop Radiated where possible -->
+	<!-- Group Pipe Baton Fat Cop pegged to Fat Cop Radiated -->
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieFatCopGroupGS')]/entity[@name='zombieFatCopRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
 		<entity name="zombieBatonFatCop" prob="0.2"/>
@@ -491,7 +493,7 @@
 		<entity name="zombieBatonFatCop" prob="0.9"/>
 	</insertAfter>
 	
-	<!-- Group Steel Club Big Momma pegged to Big Momma Radiated where possible -->
+	<!-- Group Steel Club Big Momma pegged to Big Momma Radiated -->
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombieGhostTownGroupGS')]/entity[@name='zombieFemaleFatRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
 		<entity name="zombieSteelClubFemaleFat" prob="0.2"/>
@@ -515,6 +517,32 @@
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieFemaleFatRadiated']"> <!-- GS 174 -->
 		<entity name="zombieSteelClubFemaleFat" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Bolt Nurse pegged to Nurse Radiated -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 200 -->
+		<entity name="zombieBoltNurse" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 148 -->
+		<entity name="zombieBoltNurse" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 386 -->
+		<entity name="zombieBoltNurse" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 194 -->
+		<entity name="zombieBoltNurse" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 117 -->
+		<entity name="zombieBoltNurse" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 153 -->
+		<entity name="zombieBoltNurse" prob="0.9"/>
 	</insertAfter>
 	
 	<!-- Burnt and Mutated pegged to Moe Grunt, Feral, and Radiated spawns -->
