@@ -215,7 +215,13 @@
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_steelPrefab.prefab" local_offset="0.06,0.015,-0.09" local_rotation="0,180,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_steelPrefab.prefab" local_offset="-0.06,-0.015,0.09" local_rotation="0,0,270" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
 			</effect_group>
-		</buff>			
+		</buff>
+
+		<buff name="zombieSteelSledgehammerFatHawaiianDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/SledgeHammer/steelSledgeHammerPrefab.prefab" local_offset="0.12,0.02,-0.2" local_rotation="0,270,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>		
 		
 	</append>
 	

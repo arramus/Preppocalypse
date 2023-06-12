@@ -2565,6 +2565,18 @@
 				<property name="QuestGiven" value="quest_boltnurse"/>
 			</property>
 		</item>
+		
+	<!-- Steel Sledgehammer - Fat Hawaiian -->
+		<item name="quest_steelsledgehammerfathawaiian">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="Material" value="Mpaper"/> <property name="Weight" value="67"/>
+			<property name="DescriptionKey" value="quest_steelsledgehammerfathawaiianDesc"/>
+			<property name="CustomIcon" value="quest_steelsledgehammerfathawaiian"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_steelsledgehammerfathawaiian"/>
+			</property>
+		</item>
 
 	<!-- ADMIN TOOLS -->
 	
