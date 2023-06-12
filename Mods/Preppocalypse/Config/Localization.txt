@@ -229,6 +229,7 @@ zombieSwissVetterliBoe,entityclasses,Entity,,,Swiss Vetterli Boe,,,,,,,,,,,,,
 zombieChainsawMoe,entityclasses,Entity,,,Chainsaw Moe,,,,,,,,,,,,,
 zombieDesertVultureTomClark,entityclasses,Entity,,,Desert Vulture Tom Clark,,,,,,,,,,,,,
 zombiePumpShotgunBiker,entityclasses,Entity,,,Pump Shotgun Biker,,,,,,,,,,,,,
+zombieBatonFatCop,entityclasses,Entity,,,Baton Fat Cop,,,,,,,,,,,,,
 
 loadingTipPrepperVehicles,UI,Loading Screen,x,,"The vehicles in Preppocalypse are slightly enhanced, with a little extra speed and better passage through water.",,,,,,,,,,,,,
 loadingTipPrepperVehicles_title,UI,Loading Screen,x,,Vehicles,,,,,,,,,,,,,
@@ -287,5 +288,7 @@ quest_desertvulturetomclark,items,Quest - Challenge,,,"Desert Vulture - Tom Clar
 quest_desertvulturetomclarkDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to find and eliminate 50 Tom Clark Entities with only the Desert Vulture. Earn XP, Dukes, and 1 Skill Point upon completion.\n\nAdditional Quest Notes can be found in safes. Scraps to 50 paper.",,,,,,,,,,,,,
 quest_pumpshotgunbiker,items,Quest - Challenge,,,"Pump Shotgun - Biker Entities",,,,,,,,,,,,,
 quest_pumpshotgunbikerDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to find and eliminate 50 Biker Entities with only the Pump Shotgun. Earn XP, Dukes, and 1 Skill Point upon completion.\n\nAdditional Quest Notes can be found in safes. Scraps to 50 paper.",,,,,,,,,,,,,
+quest_batonfatcop,items,Quest - Challenge,,,"Pipe Baton - Fat Cops",,,,,,,,,,,,,
+quest_batonfatcopDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to find and eliminate 50 Fat Cops with only the Pipe Baton. Earn XP, Dukes, and 1 Skill Point upon completion.\n\nAdditional Quest Notes can be found in safes. Scraps to 50 paper.",,,,,,,,,,,,,
 
 jetBootsAdmin,items,Item,,,Jet Boots (Admin),,,,,,,,,,,,,

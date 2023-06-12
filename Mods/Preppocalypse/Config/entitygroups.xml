@@ -29,6 +29,7 @@
 		<entity name="zombieChainsawMoe" prob="0.75"/>
 		<entity name="zombieDesertVultureTomClark" prob="0.75"/>
 		<entity name="zombiePumpShotgunBiker" prob="0.75"/>
+		<entity name="zombieBatonFatCop" prob="0.75"/>
 	</append>
 
 	<!-- All at Night Wasteland -->	
@@ -47,7 +48,8 @@
 		<entity name="zombieSwissVetterliBoe" prob="1.25"/>
 		<entity name="zombieChainsawMoe" prob="1.25"/>
 		<entity name="zombieDesertVultureTomClark" prob="1.25"/>
-		<entity name="zombiePumpShotgunBiker" prob="1.25"/>		
+		<entity name="zombiePumpShotgunBiker" prob="1.25"/>
+		<entity name="zombieBatonFatCop" prob="1.25"/>	
 	</append>
 	
 	<!-- Animals -->
@@ -459,6 +461,32 @@
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBikerRadiated']"> <!-- GS 279 -->
 		<entity name="zombiePumpShotgunBiker" prob="0.9"/>
+	</insertAfter>
+	
+	<!-- Group Pipe Baton Fat Cop pegged to Fat Cop Radiated where possible -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieFatCopGroupGS')]/entity[@name='zombieFatCopRadiated' and not(@prob='0')]"> <!-- Stops spawning at 0 prob stages -->
+		<entity name="zombieBatonFatCop" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieFatCopRadiated']"> <!-- GS 198 -->
+		<entity name="zombieBatonFatCop" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassHordeStageGS')]/entity[@name='zombieFatCopRadiated']"> <!-- GS 79 -->
+		<entity name="zombieBatonFatCop" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'badassOnlyHordeStageGS')]/entity[@name='zombieFatCopRadiated']"> <!-- GS 130 -->
+		<entity name="zombieBatonFatCop" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieFatCopRadiated']"> <!-- GS 207 -->
+		<entity name="zombieBatonFatCop" prob="0.9"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieFatCopRadiated']"> <!-- GS 181 -->
+		<entity name="zombieBatonFatCop" prob="0.9"/>
 	</insertAfter>
 	
 	<!-- Burnt and Mutated pegged to Moe Grunt, Feral, and Radiated spawns -->

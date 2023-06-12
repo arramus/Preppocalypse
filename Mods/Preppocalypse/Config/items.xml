@@ -2456,6 +2456,18 @@
 				<property name="QuestGiven" value="quest_pumpshotgunbiker"/>
 			</property>
 		</item>
+		
+	<!-- Pump Shotgun - Biker Entity -->	
+		<item name="quest_batonfatcop">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="Material" value="Mpaper"/> <property name="Weight" value="67"/>
+			<property name="DescriptionKey" value="quest_batonfatcopDesc"/>
+			<property name="CustomIcon" value="quest_batonfatcop"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_batonfatcop"/>
+			</property>
+		</item>
 
 	<!-- ADMIN TOOLS -->
 	
