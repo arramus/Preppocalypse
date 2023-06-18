@@ -523,8 +523,16 @@
 	
 	<!-- Group Bolt Nurse pegged to Nurse Radiated -->
 	
-	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 200 -->
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS200')]/entity[@name='zombieNurseRadiated']">
 		<entity name="zombieBoltNurse" prob="0.2"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS400')]/entity[@name='zombieNurseRadiated']"> 
+		<entity name="zombieBoltNurse" prob="0.3"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'zombieHospitalGroupGS800')]/entity[@name='zombieNurseRadiated']">
+		<entity name="zombieBoltNurse" prob="0.4"/>
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieNurseRadiated']"> <!-- GS 148 -->
